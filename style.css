@@ -1,0 +1,164 @@
+@font-face {
+  font-family: "Playball";
+  src: url("assets/Playball-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+*,
+*:focus {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  outline: none;
+  box-sizing: border-box;
+  font-family: "Playball", Gotham Rounded, sans-serif;
+  font-weight: normal;
+}
+
+body {
+  background: #52442c url("assets/bg-image.jpg") no-repeat;
+}
+
+.calculator {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  width: 340px;
+  min-height: 500px;
+  background-color: rgba(22, 29, 47, 0.5);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -250px 0 0 -170px;
+  border: 1px solid #081841;
+  border-radius: 10px;
+  box-shadow: 10px 5px 5px 0px #081841;
+
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "output output output output" "button-ac button-del button-root button-pow"
+    "button-7 button-8 button-9 button-div" "button-4 button-5 button-6 button-mul" "button-1 button-2 button-3 button-min"
+    "button-dot button-0 button-equ button-plus";
+}
+
+.output-panel {
+  overflow: hidden;
+  margin: 10px;
+  grid-area: output;
+  padding: 20px;
+  width: 320px;
+  min-height: 82px;
+  max-height: 160px;
+  background-color: #081841;
+  border: 1px solid #000;
+  border-radius: 10px;
+  color: #fff;
+  letter-spacing: 2px;
+  font-size: 28px;
+  line-height: 40px;
+  font-weight: 500;
+  line-height: 40px;
+  text-align: right;
+}
+
+.button-ac {
+  grid-area: button-ac;
+  margin: 0 5px 5px 10px;
+}
+.button-del {
+  grid-area: button-del;
+  margin: 0 5px 5px 5px;
+}
+.button-root {
+  grid-area: button-root;
+  margin: 0 5px 5px 5px;
+}
+.button-pow {
+  grid-area: button-pow;
+  margin: 0 10px 5px 5px;
+}
+.button-7 {
+  grid-area: button-7;
+  margin: 0 5px 5px 10px;
+}
+.button-8 {
+  grid-area: button-8;
+  margin: 0 5px 5px 5px;
+}
+.button-9 {
+  grid-area: button-9;
+  margin: 0 5px 5px 5px;
+}
+.button-div {
+  grid-area: button-div;
+  margin: 0 10px 5px 5px;
+}
+.button-4 {
+  grid-area: button-4;
+  margin: 0 5px 5px 10px;
+}
+.button-5 {
+  grid-area: button-5;
+  margin: 0 5px 5px 5px;
+}
+.button-6 {
+  grid-area: button-6;
+  margin: 0 5px 5px 5px;
+}
+.button-mul {
+  grid-area: button-mul;
+  margin: 0 10px 5px 5px;
+}
+.button-1 {
+  grid-area: button-1;
+  margin: 0 5px 5px 10px;
+}
+.button-2 {
+  grid-area: button-2;
+  margin: 0 5px 5px 5px;
+}
+.button-3 {
+  grid-area: button-3;
+  margin: 0 5px 5px 5px;
+}
+.button-min {
+  grid-area: button-min;
+  margin: 0 10px 5px 5px;
+}
+.button-dot {
+  grid-area: button-dot;
+  margin: 0 5px 10px 10px;
+}
+.button-0 {
+  grid-area: button-0;
+  margin: 0 5px 10px 5px;
+}
+.button-equ {
+  grid-area: button-equ;
+  margin: 0 5px 10px 5px;
+}
+.button-plus {
+  grid-area: button-plus;
+  margin: 0 10px 10px 5px;
+}
+
+.calculator button {
+  width: 70px;
+  height: 70px;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 40px;
+  opacity: 1;
+  background-color: rgba(22, 29, 47, 0.9);
+  color: #fff;
+  border: 0.5px solid #000;
+  border-radius: 5px;
+}
+
+.calculator button:hover {
+  cursor: pointer;
+  background-color: rgba(22, 29, 47, 0.5);
+  color: #adb8b8;
+}
